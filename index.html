@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-audio" src="background-music.mp3" autoplay loop></audio>
+    <audio id="correct-sound" src="correct.mp3"></audio>
+    <audio id="incorrect-sound" src="wrong.mp3"></audio>
+    <div id="start-screen">
+        <h1>Quiz App</h1>
+        <p>Select a level to play:</p>
+        <button onclick="startGame(1)">Level 0</button>
+        <button onclick="startGame(2)">Level 1</button>
+        <button onclick="startGame(3)">Level 2</button>
+    </div>
+
+
+    <div id="game-container" style="display: none;">
+        <div id="question-number"></div>
+        <div id="question"></div>
+        <div id="answers">
+            <button class="answer-btn" onclick="checkAnswer(0)"></button>
+            <button class="answer-btn" onclick="checkAnswer(1)"></button>
+            <button class="answer-btn" onclick="checkAnswer(2)"></button>
+            <button class="answer-btn" onclick="checkAnswer(3)"></button>
+        </div>
+        <div id="score">Score: 0</div>
+        <div id="timer"></div>
+    </div>
+
+
+    <div id="end-screen" style="display: none;">
+        <div id="final-score"></div>
+        <button id="play-again" onclick="playAgain()">Play Again</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
